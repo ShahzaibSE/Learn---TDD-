@@ -1,0 +1,25 @@
+{
+  "name": "todo-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha ./tests/test.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "^4.0.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "debug": "~2.6.3",
+    "express": "^4.15.3",
+    "jade": "~1.11.0",
+    "method-override": "^2.3.9",
+    "mocha": "^3.4.2",
+    "mongoose": "^4.11.1",
+    "morgan": "^1.8.2",
+    "serve-favicon": "^2.4.3",
+    "sinon": "^2.3.6",
+    "sinon-mongoose": "^2.0.2"
+  }
+}

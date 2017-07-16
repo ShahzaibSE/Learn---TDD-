@@ -22,6 +22,10 @@ exports.parse = function(args,defaults){
                     value = parseInt(value, 10);
                 }
                 options[key] = value;
+            }else{
+                console.log(arg);
+                debugger;
+                options[arg] = true;
             }
        }
    }

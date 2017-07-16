@@ -10,27 +10,30 @@ const mongoose = require('mongoose');
                  require('sinon-mongoose');
 const sinon = require('sinon');
 
-var config = require('./config');  //Configuration file.
+//Controllers
+// var tagsController = require('./../lib/tags.js');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+// var config = require('./config');  //Configuration file.
+
+// var index = require('./routes/index');
+// var users = require('./routes/users');
 
 var app = express();
 
 //Mongodb Models
 //Importing our todo model for our unit testing.
-var Todo = require('./schema_model/schema_model');
+// var Todo = require('./schema_model/schema_model');
 
 //Mongodb Connection
-mongoose.connect(config.db.connection);
+// mongoose.connect(config.db.connection);
 
-mongoose.connection.on('connected',function(){
-  console.log("Mongodb connection is up and running!");
-});
+// mongoose.connection.on('connected',function(){
+//   console.log("Mongodb connection is up and running!");
+// });
 
-mongoose.connection.on('error',function(){
-  console.log("Internal server error while connecting to the database server.");
-});
+// mongoose.connection.on('error',function(){
+//   console.log("Internal server error while connecting to the database server.");
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -48,8 +51,8 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+// app.use('/', index);
+// app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -68,6 +71,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 //Test
 // describe('Get all todos',function(){
